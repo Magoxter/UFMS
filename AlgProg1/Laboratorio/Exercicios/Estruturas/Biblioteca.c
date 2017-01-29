@@ -6,7 +6,7 @@
 #include <string.h>
  
 // DeclaraÃ§Ã£o dos tipos
-typedef struct {
+typedef struct { 
     char materia[50];
     char autor[50];
     int prateleira;
