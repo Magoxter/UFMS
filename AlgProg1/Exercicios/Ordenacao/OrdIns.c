@@ -17,6 +17,7 @@ int main(void) {
     printf("Elemento a Ser Inserido: ");
     scanf ("%d", &elemento);
 
+// Inicializacao
     tam = 14;
 
 // Insercao
