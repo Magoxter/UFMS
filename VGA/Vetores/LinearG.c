@@ -41,7 +41,7 @@ int main (void) {
 
 void leitura (float v[MAX]) {
   int n,i;
-  	n = 3;
+    n = 3;
   for (i = 0; i < n; i++)
   	 scanf("%f", &v[i]);
  return;
@@ -51,16 +51,16 @@ void vetor1 (float v[MAX]) {
    if (v[0] == 0 &&
        v[1] == 0 &&
        v[2] == 0)
-   	  printf("LD\n");
+     printf("LD\n");
    else
-  	  printf("LI\n");
+     printf("LI\n");
 }
 
 void vetor2 (float u[], float v[]) {
   if ((v[1]/u[1] == v[0]/u[0] &&
-   	   v[2]/u[2] == v[0]/u[0])||
-   	  (u[1]/v[1] == u[0]/v[0] &&
-   	   u[2]/v[1] == u[0]/v[0]))
+       v[2]/u[2] == v[0]/u[0])||
+      (u[1]/v[1] == u[0]/v[0] &&
+       u[2]/v[1] == u[0]/v[0]))
     printf("LD\n");
   else
      printf("LI\n");
@@ -69,11 +69,11 @@ void vetor2 (float u[], float v[]) {
 void vetor3 (float u[], float v[], float w[]) {
   int det;
    det = (v[0]*u[1]*w[2]) +
- 	 	     (v[1]*u[2]*w[0]) +
- 	 	     (v[2]*u[0]*w[1]) -
- 	 	     (v[2]*u[1]*w[0]) -
- 		     (v[1]*u[0]*w[2]) -
-	 	     (v[0]*u[2]*w[1]) ;
+ 	 (v[1]*u[2]*w[0]) +
+ 	 (v[2]*u[0]*w[1]) -
+ 	 (v[2]*u[1]*w[0]) -
+ 	 (v[1]*u[0]*w[2]) -
+	 (v[0]*u[2]*w[1]) ;
    if (det == 0)
      printf("LD\n");
    else
