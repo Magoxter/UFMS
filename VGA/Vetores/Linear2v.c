@@ -17,11 +17,11 @@ int main (void) {
     printf("Vetor u: ");
   for (i = 0; i < n; i++)
      scanf("%f", &u[i]);
-  	lamb = v[0]/u[0];
+    lamb = v[0]/u[0];
    if (v[1]/u[1] == lamb &&
-   	   v[2]/u[2] == lamb)
-   	  printf("LD\n");
+       v[2]/u[2] == lamb)
+     printf("LD\n");
    else
-  	  printf("LI\n");
+     printf("LI\n");
  return 0;
 }
