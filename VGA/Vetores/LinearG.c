@@ -13,28 +13,28 @@ void leitura (float[]);
 int main (void) {
   int	qtd;
   float	u[MAX],
-  		v[MAX],
-  		w[MAX];
+	v[MAX],
+	w[MAX];
     printf("Qntd de Vetores: ");
      scanf("%d", &qtd);
   switch(qtd) {
-  	case 1:
-  	   leitura(v);
-  	   vetor1 (v);
-  	  break;
-  	case 2:
-  	   leitura(u);
-  	   leitura(v);
-  	   vetor2 (u,v);
-  	  break;
-  	case 3:
-  	   leitura(u);
-  	   leitura(v);
-  	   leitura(w);
-  	   vetor3 (u,v,w);
-  	  break;
-  	default:
-  		printf("LD\n");
+     case 1:
+        leitura(v);
+        vetor1 (v);
+       break;
+     case 2:
+        leitura(u);
+        leitura(v);
+        vetor2 (u,v);
+       break;
+     case 3:
+        leitura(u);
+        leitura(v);
+        leitura(w);
+        vetor3 (u,v,w);
+       break;
+     default:
+	printf("LD\n");
   }
  return 0;
 }
