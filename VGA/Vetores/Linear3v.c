@@ -21,15 +21,15 @@ int main (void) {
     printf("Vetor w: ");
   for (i = 0; i < n; i++)
      scanf("%f", &w[i]);
- 	det = (v[0]*u[1]*w[2]) +
- 		  (v[1]*u[2]*w[0]) +
- 		  (v[2]*u[0]*w[1]) -
- 		  (v[2]*u[1]*w[0]) -
- 		  (v[1]*u[0]*w[2]) -
- 		  (v[0]*u[2]*w[1]);
+   det = (v[0]*u[1]*w[2]) +
+ 	 (v[1]*u[2]*w[0]) +
+ 	 (v[2]*u[0]*w[1]) -
+ 	 (v[2]*u[1]*w[0]) -
+ 	 (v[1]*u[0]*w[2]) -
+ 	 (v[0]*u[2]*w[1]) ;
    if (det == 0)
-   	  printf("LD\n");
+     printf("LD\n");
    else
-  	  printf("LI\n");
+     printf("LI\n");
  return 0;
 }
