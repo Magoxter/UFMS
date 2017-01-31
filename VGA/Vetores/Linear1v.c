@@ -13,8 +13,8 @@ int main (void) {
   for (i = 0; i < n; i++)
      scanf("%f", &v[i]);
    if (v[0] == 0 &&
-   	   v[1] == 0 &&
-   	   v[2] == 0)
+       v[1] == 0 &&
+       v[2] == 0)
    	  printf("LD\n");
    else
   	  printf("LI\n");
