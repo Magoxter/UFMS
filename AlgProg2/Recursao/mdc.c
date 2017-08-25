@@ -18,8 +18,8 @@ int Algrithm (int a, int b) {
   int mdc,r;
    r = a % b;
  if (!r)
- 	 mdc = b;
+   mdc = b;
  else
- 	 mdc = Algrithm(b,a%b);
+   mdc = Algrithm(b,a%b);
  return mdc;
 }
