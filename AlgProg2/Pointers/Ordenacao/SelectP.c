@@ -73,4 +73,4 @@ void troca (int *x,int *y) {
    *y = *x;
    *x = ax;
  return;
-}
+} 
