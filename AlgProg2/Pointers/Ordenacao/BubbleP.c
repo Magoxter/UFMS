@@ -48,7 +48,7 @@ void bubble_R (int v[],int n) {
     troca(p,q);
  } bubble_R(v,n-1);
  return;
-}
+} 
 
 void bubble (int v[],int n) {
   int k;
