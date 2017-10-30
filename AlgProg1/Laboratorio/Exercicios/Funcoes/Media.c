@@ -64,4 +64,4 @@ void print(double media) {
     printf("%lf", media);
 
     return;
-}
+} 
