@@ -32,7 +32,7 @@ float        nota,           // nota sendo lida
     printf("Nota (ctrl-D para finalizar ou nota negativa):  ");
 
 // Passo 2.1. Leia uma nota
-   while (scanf("%f", ¬a) != EOF && nota >= 0.0) {
+   while (scanf("%f", nota) != EOF && nota >= 0.0) {
 
 // Passo 2.2. Calcule a maior nota
     if (nota > maiornota)
