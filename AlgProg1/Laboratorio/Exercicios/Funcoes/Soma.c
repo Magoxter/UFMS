@@ -31,7 +31,7 @@ int leia(void) {
 
 void print(int soma) {
 
-    printf("%d", soma);
+    printf("%d\n", soma);
 
     return;
 }
