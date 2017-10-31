@@ -16,9 +16,9 @@ double   notas[MAX];   // lista das notas
 int      num;          // número de notas da lista
 double	 soma;         // Soma das notas
 double   media,        // media das notas
-	     soma2,        // soma dos
-	     variancia,    // variança dos números
-	     desvioPadrao; //
+         soma2,        // soma dos
+	       variancia,    // variança dos números
+	       desvioPadrao; //
 
 // pré: UmFloat[1]\n UmFloat[2]\n ... \n UmFloat[n]\n && n > 0
 
