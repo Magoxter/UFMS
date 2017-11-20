@@ -1,0 +1,193 @@
+		/* Doces */
+#include <stdio.h>
+#include <stdlib.h>
+#define MX 10
+
+void desce (int[],int,int);
+void heap  (int[],int);
+void print (int[],int);
+
+void heapSort (int[],int);
+
+int pai (int);
+int esq (int);
+int dir (int);
+
+int raix (int,int);
+int form (int,int);
+
+int arrasta (int[],int,int);
+int doces   (int[],int,int);
+void printH (int[],int);
+
+void troca (int*,int*);
+
+int main (void) {
+  int n,i,k;
+  int v[MX];
+   scanf("%d", &n);
+   scanf("%d", &k);
+ for (i = 0; i < MX; i++)
+    v[i] = 0;
+ for (i = 0; i < n; i++)
+   scanf("%d", &v[i]);
+  heapSort(v,n);
+  print(v,n);
+ printf("%d\n", doces(v,n,k));
+ return 0;
+}
+
+int doces (int v[],int n,int k) {
+  int p,q;
+  int num;
+  int count;
+   count = 0;
+ if (v[0] >= k)
+   return count;
+ else {
+  while (n > 1) {
+    p = v[0];
+    q = v[1];
+    num = form(p,q);
+    count++;
+   if (num >= k)
+     return count;
+   else {
+     v[0] = num;
+    arrasta(v,1,n);
+     n--;
+    heapSort(v,n);
+    print(v,n);  
+   }
+  }
+ }
+ return -1;
+}
+
+int form (int x,int y) {
+ return x + (y *2);
+}
+
+int arrasta (int v[],int i,int n) {
+  int  k;
+   k = i +1;
+ for (i = i; i < n-1; i++) {
+   troca(&v[i],&v[k]);
+  k++;
+ }
+ return n-1;
+}
+
+void heapSort (int v[],int n) {
+  int k,i;
+  int pai;
+  int filho;
+   i = n /2;
+ while (1) {
+  if (i) {
+   i--;
+   k = v[i];
+  } else {
+      n--;
+  if (!n)
+    return;
+   k = v[n];
+   v[n] = v[0];
+  } pai = i;
+    filho = i *2 +1;
+  while (filho < n) {
+   if (filho + 1 < n  &&  v[filho +1] > v[filho])
+     filho++;
+   if (v[filho] > k) {
+     v[pai] = v[filho];
+     pai = filho;
+     filho = pai *2 +1;
+   } else
+      break;
+  } v[pai] = k;
+ }
+ return;
+}
+
+void heap (int v[],int n) {
+  int i;
+   i = pai(n-1);
+ while (i >= 0) {
+ 	 desce(v,n,i);
+  i--;
+ }
+ return;
+}
+
+void desce (int v[],int n,int i) {
+  int d,e;
+  int min;
+   d = dir(i);
+   e = esq(i);
+   min = i;
+  if (d < n && v[d] < v[min])
+    min = d;
+  if (e < n && v[e] < v[min])
+    min = e;
+ if (min != i) {
+   troca(&v[min],&v[i]);
+   desce(v,n,min);
+ }
+ return;
+}
+
+int pai (int i) {
+ if (!i)
+   return i;
+ else
+   return (i -1) /2;
+}
+
+int esq (int i) {
+ return (2 *i) +1;
+}
+
+int dir (int i) {
+ return (2 *i) +2;
+}
+
+void troca (int *x,int *y) {
+  int ax;
+   ax = *y;
+   *y = *x;
+   *x = ax;
+ return;
+}
+
+void printH (int v[],int n) {
+  int k,i;
+  int cont;
+   k = 0;
+   cont = 1;
+ for (i = 0; i < n; i++) {
+   printf("%d ", v[i]);
+  if (cont < raix(2,k))
+    cont++;
+  else {
+    printf("\n");
+   cont = 1; k++;
+  }
+ } printf("\n");
+ return;
+}
+
+int raix (int n,int x) {
+  int raiz;
+   raiz = 1;
+ while (x--)
+   raiz *= n;
+ return raiz;
+}
+
+void print (int v[],int n) {
+  int i;
+ for (i = 0; i < n; i++)
+   printf("%d ", v[i]);
+  printf("\n");
+ return;
+}
