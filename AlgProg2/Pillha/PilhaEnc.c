@@ -1,7 +1,7 @@
     /* Pillha */
 #include <stdio.h>
 #include <stdlib.h>
-
+ 
 typedef struct node {
     int chave;
  struct node *prox;
