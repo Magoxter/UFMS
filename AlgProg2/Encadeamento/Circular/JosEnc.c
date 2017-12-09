@@ -34,7 +34,7 @@ cel *makeJose (cel *p,int n) {
  	 q = (cel *)malloc(sizeof(cel));
  	 q->num = i;
  	 q->prox = p->prox;
- 	 p->prox = q;
+ 	 p->prox = q; 
  	 p = p->prox;
  	++i;
  } q->prox = h->prox;
