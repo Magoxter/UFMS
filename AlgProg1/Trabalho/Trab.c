@@ -4,11 +4,11 @@
 void print (int[],int);
 
 int main(void) {
-	int k;          // Casos de Teste
+  int k;          // Casos de Teste
   int i;          // Indice Vetor
   int x;          // Variavel Auxiliar
   int z;          // Variavel Auxiliar
-	int n;          // Tamanho Vetor
+  int n;          // Tamanho Vetor
           
   int T;          // Indice de Teste
   int I;          // Indice do Hexadecimal
