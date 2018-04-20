@@ -1,13 +1,15 @@
 #include <stdio.h>
 #include <math.h>
 
-void print (int[],int);
+void print (char[]);
 
 int main(void) {
   int k;          // Casos de Teste
   int i;          // Indice Vetor
   int x;          // Variavel Auxiliar
   int z;          // Variavel Auxiliar
+  int e;          // Variavel Auxiliar
+  int d;          // Variavel Auxiliar
   int n;          // Tamanho Vetor
           
   int T;          // Indice de Teste
@@ -17,14 +19,16 @@ int main(void) {
   int oc;         // Recorrencia Octal
   int hx;         // Recorrencia Hexadecimal
 
+  int aux;        // Variavel Auxiliar
   int pot2;       // Potencia de 2 para Binario
 
   int key[10];    // Vetor de Entrada
 
   char byt[10];   // Byte do Caractere
   char bin[10];   // Binario do Caractere
+  char out[10];   // Saida para o Caractere
 
-	 scanf("%d", &k);
+   scanf("%d", &k);
 
     T = 0;
 
@@ -33,7 +37,7 @@ int main(void) {
      n = 8;
 
    for (i = 0; i < n; i++) {
-   	  scanf("%d", &key[i]);
+      scanf("%d", &key[i]);
    }
 
    scanf("%d", &dc);
@@ -91,16 +95,37 @@ int main(void) {
     else {
       scanf("%s", bin);
     }
-  }
 
 // Limpeza de byt com ...
   for (i = 0; i < 8; i++)
      byt[i] = 46;
 
-// Decodificacao -> veio no bin
+// Inversao para a Entrada
+   e = 0;
+   d = 7;
+  while (e < d) {
+    aux = bin[e];
+    bin[e] = bin[d];
+    bin[d] = aux;
+  ++e;
+  --d;
+  }
 
+// Decodificacao
+   for (i = 0; i < 8; i++) {
+     out[i] = bin[key[i]];
+   }
+
+   print(out);
+
+  }
     printf("Teste %d:\n", T);
    k--;
   }
  return 0;
+}
+
+void print (char v[]) {
+  printf("%s\n", v);
+ return;
 }
