@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Agencia.ModAgenciaController">
+   <children>
+      <Label layoutX="28.0" layoutY="365.0" text="Módulo Agência">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="301.0" fitWidth="607.0" layoutX="10.0" layoutY="120.0" opacity="0.15" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Cliente/linhas.png" />
+         </image>
+      </ImageView>
+      <ImageView id="logoBanco" fitHeight="150.0" fitWidth="281.0" layoutX="205.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Cliente/banco.png" />
+         </image>
+      </ImageView>
+      <Button id="botao_abrir" fx:id="BotaoAbrir" layoutX="105.0" layoutY="253.0" mnemonicParsing="false" onAction="#handleActionOpen" prefHeight="36.0" prefWidth="126.0" text="Abrir Conta" />
+      <Button id="botao_editar" fx:id="BotaoEditar" layoutX="247.0" layoutY="253.0" mnemonicParsing="false" onAction="#handleActionEdit" prefHeight="36.0" prefWidth="126.0" text="Editar Conta" />
+      <Button id="botao_fechar" fx:id="BotaoFechar" layoutX="392.0" layoutY="253.0" mnemonicParsing="false" onAction="#handleActionClose" prefHeight="36.0" prefWidth="126.0" text="Fechar Conta" />
+      <Button id="botao_fechar" fx:id="BotaoRelatorio" layoutX="455.0" layoutY="356.0" mnemonicParsing="false" onAction="#handleActionRelatorio" prefHeight="36.0" prefWidth="126.0" text="Relatórios" />
+   </children>
+</AnchorPane>

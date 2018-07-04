@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="230.0" prefWidth="381.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bancoms.FecharContaConfController">
+   <children>
+      <Label layoutX="52.0" layoutY="57.0" text="Certeza que deseja fechar conta?">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="buttonNope" layoutX="103.0" layoutY="151.0" mnemonicParsing="false" onAction="#ActionNo" text="Não" />
+      <Button fx:id="buttonYep" layoutX="226.0" layoutY="151.0" mnemonicParsing="false" onAction="#ActionYes" text="Sim" />
+   </children>
+</AnchorPane>
