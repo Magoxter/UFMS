@@ -1,0 +1,36 @@
+/* Deep for Search */
+/* Busca por Profundidade */
+
+/* Algorithm */
+/*
+/* BuscaEmProfundidade(G):
+ *  CriaVetor(M[n]);
+ *  Inicializa M com 0s;
+ *  Visitar(G,0,M);
+ *  Verifica se todo vertice foi visitado
+ */
+
+/* BuscaEmProfundidade(G):
+ *  CriaVetor(M[n]);
+ *  Inicializa M com 0s;
+ *  Visitar(G,0,M);
+ *
+ *  Enquanto houver v tq M[v] == 0:
+ *    Visitar(G,v,M);
+ */
+
+/* Visitar(G,v,a,M):
+ *  se M[v] = 0
+ *  | M[v] <- 1;
+ *  |para cada vizinho u de v em G:
+ *  | se u != a
+ *  |  Visitar(G,u,M);
+ *  else
+ *    ciclo = true;
+ */
+
+/* LEGENDA
+ *  v - vertice
+ *  u - vertice visinho
+ *  a - vertice anterior
+ */
